@@ -1,7 +1,4 @@
-<div style="display: flex; align-items: center;">
-  <img src="./Logo.png" width="60">
-  <p style="font-family: 'Press Start 2P', cursive; font-size: 24px; margin-left: 10px;">CCSharp</p>
-</div>
+# <img src="./Logo.png" width="50"> CCSharp
 CCSharp allows you to write ComputerCraft programs in C# by transpiling them into Lua.
 
 
@@ -33,6 +30,7 @@ Start()
 ## Docs
 * [How to use](./docs/how_to_use.md)
 * [Quirks to be aware of](./docs/quirks.md)
+
 
 
 ## TODO
