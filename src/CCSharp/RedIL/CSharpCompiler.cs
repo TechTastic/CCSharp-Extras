@@ -550,7 +550,15 @@ public class CSharpCompiler
                 memberReferenceExpression.MemberName);
 
             var caller = isStatic ? null : CastUtilities.CastRedILNode<ExpressionNode>(target.AcceptVisitor(this));
-            
+            if (isStatic)
+            {
+                //TODO This is a band aid fix for referring to static class members with the class name, think it can be handled better higher up the chain
+                ExpressionNode expressionNode = resolver.Resolve(GetContext(memberReferenceExpression), caller);
+                if (expressionNode is TableKeyAccessNode tableKeyAccessNode &&
+                    tableKeyAccessNode.Key is ConstantValueNode identifierValueNode &&
+                    identifierValueNode.DataType == DataValueType.String)
+                    return new IdentifierNode(identifierValueNode.Value as string, tableKeyAccessNode.DataType);
+            }
             return resolver.Resolve(GetContext(memberReferenceExpression), caller);
         }
 
