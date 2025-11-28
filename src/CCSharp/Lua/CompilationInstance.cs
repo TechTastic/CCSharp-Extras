@@ -753,7 +753,7 @@ class CompilationInstance
                     state.Write("*");
                     break;
                 case BinaryExpressionOperator.Divide:
-                    state.Write("/'");
+                    state.Write("/");
                     break;
                 case BinaryExpressionOperator.Modulus:
                     state.Write("%");
