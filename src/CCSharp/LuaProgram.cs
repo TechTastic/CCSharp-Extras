@@ -58,6 +58,7 @@ public class LuaProgram
             if(methodInfo.GetCustomAttribute<LuaMainAttribute>() != null)
                 program.MainMethods.Add(methodInfo.Name);
         }
+        program.CompiledCode = program.CompiledCode.Trim('\n');
         return program;
     }
 
