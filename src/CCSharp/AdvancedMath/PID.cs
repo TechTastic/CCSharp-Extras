@@ -4,7 +4,7 @@ using CCSharp.ComputerCraft;
 namespace CCSharp.AdvancedMath;
 
 [LuaRequiredModule("AdvancedMath.pid", "pid")]
-public class PID<T, Y>
+public abstract class PID<T, Y>
 {
     [LuaProperty("sp")] public T SetPoint { get; set; }
     [LuaProperty("kp")] public double KP { get; set; }
