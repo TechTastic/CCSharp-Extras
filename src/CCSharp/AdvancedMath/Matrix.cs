@@ -34,7 +34,7 @@ public class Matrix
     /// <param name="columns">The number of columns in the matrix.</param>
     /// <param name="function">A function that takes in a row and column index (1-based) and returns the value at that position.</param>
     [LuaConstructor("matrix.new")]
-    public Matrix(int rows, int columns, Func<int, int> function) { }
+    public Matrix(int rows, int columns, Func<int, int, double> function) { }
 
     /// <summary>
     /// Constructs a new Matrix with the given number of rows and columns, filling it with the provided value.
