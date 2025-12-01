@@ -134,7 +134,7 @@ public class Ship
     /// <param name="pos">The Shipyard position on the Ship</param>
     /// <returns>The Worldspace position</returns>
     [LuaMethod("ship.transformPositionToWorld")]
-    public static Vector3 transformPositionToWorld(Vector3 pos) => default;
+    public static Vector3 TransformPositionToWorld(Vector3 pos) => default;
 
     /// <summary>
     /// Holds the thread while awaiting the "physics_ticks" event
